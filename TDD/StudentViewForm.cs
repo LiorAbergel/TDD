@@ -33,5 +33,10 @@ namespace TDD
             AddStudentForm addStudentForm = new AddStudentForm();
             addStudentForm.ShowDialog();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -59,12 +59,14 @@
             this.Grade3,
             this.Grade4,
             this.Grade5});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 15);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1226, 566);
+            this.dataGridView1.Size = new System.Drawing.Size(1635, 708);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ID
             // 
@@ -145,9 +147,10 @@
             // 
             // AddStudentButton
             // 
-            this.AddStudentButton.Location = new System.Drawing.Point(1273, 514);
+            this.AddStudentButton.Location = new System.Drawing.Point(1697, 642);
+            this.AddStudentButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddStudentButton.Name = "AddStudentButton";
-            this.AddStudentButton.Size = new System.Drawing.Size(91, 54);
+            this.AddStudentButton.Size = new System.Drawing.Size(121, 68);
             this.AddStudentButton.TabIndex = 1;
             this.AddStudentButton.Text = "Add Student";
             this.AddStudentButton.UseVisualStyleBackColor = true;
@@ -155,11 +158,12 @@
             // 
             // StudentViewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1379, 692);
+            this.ClientSize = new System.Drawing.Size(1839, 865);
             this.Controls.Add(this.AddStudentButton);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "StudentViewForm";
             this.Text = "Student View";
             this.Load += new System.EventHandler(this.Form1_Load);
