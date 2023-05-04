@@ -15,7 +15,8 @@ namespace TDD
         private string phone;
         private int[] grade = new int[5];
         private float avg;
-
+        
+        public Student() {}
         public Student(int id, string firstName, string lastName, string email, string phone, int[] grade)
         {
             this.id = id;
@@ -26,6 +27,15 @@ namespace TDD
             this.grade = grade;
             calculateAvg();
         }
+
+
+        public void setId(int id) { this.id = id; }
+        public void setFirstName(string name) { this.firstName = name; }
+        public void setLastName(string lastName) { this.lastName = lastName; }
+        public void setEmail(string email) { this.firstName = email; }
+        public void setGrade(int[] grade) { this.grade = grade; }
+        public void setPhone(string phone) { this.phone = phone; }
+
         public int getId() { return id; }
         public string getFirstName() { return firstName; }
         public string getLastName() { return lastName; }
