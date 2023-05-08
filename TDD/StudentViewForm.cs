@@ -19,6 +19,26 @@ namespace TDD
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            for (int i = 0; i < WelcomeForm.Students.Count; i++)
+            {
+                Student student = WelcomeForm.Students[i];
+
+                int[] grades = student.getGrades();
+                StudentViewTable.Rows.Add(
+                    i + 1,
+                    student.getId(),
+                    student.getFirstName(),
+                    student.getLastName(),
+                    student.getEmail(),
+                    student.getPhone(),
+                    student.getAvg(),
+                    grades[0],
+                    grades[1],
+                    grades[2],
+                    grades[3],
+                    grades[4]
+                );
+            }
 
         }
 

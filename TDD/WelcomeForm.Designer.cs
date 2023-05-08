@@ -73,6 +73,7 @@
             this.Controls.Add(this.AddStudentButton);
             this.Name = "WelcomeForm";
             this.Text = "WelcomeForm";
+            this.Load += new System.EventHandler(this.WelcomeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

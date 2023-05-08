@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
+
 namespace TDD
 {
     public partial class AddStudentForm : Form
@@ -97,6 +98,7 @@ namespace TDD
             }         
             newStud.setGrade(GradeArray);        
             
+            /*
             int ConvertedIntToString;
 
             if (int.TryParse(IDBox.Text, out ConvertedIntToString))
@@ -110,6 +112,7 @@ namespace TDD
                 MessageBox.Show("Invalid input of id: " + IDBox.Text);
                 return;
             }
+            */
 
         }
 
