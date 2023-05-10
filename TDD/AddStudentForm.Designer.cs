@@ -179,7 +179,7 @@
             this.IDBox.Location = new System.Drawing.Point(479, 78);
             this.IDBox.Margin = new System.Windows.Forms.Padding(4);
             this.IDBox.Name = "IDBox";
-            this.IDBox.Size = new System.Drawing.Size(121, 29);
+            this.IDBox.Size = new System.Drawing.Size(154, 29);
             this.IDBox.TabIndex = 32;
             this.IDBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IDBox_KeyPress);
             // 
@@ -188,7 +188,7 @@
             this.Grade5Box.Location = new System.Drawing.Point(479, 424);
             this.Grade5Box.Margin = new System.Windows.Forms.Padding(4);
             this.Grade5Box.Name = "Grade5Box";
-            this.Grade5Box.Size = new System.Drawing.Size(121, 29);
+            this.Grade5Box.Size = new System.Drawing.Size(154, 29);
             this.Grade5Box.TabIndex = 31;
             this.Grade5Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Grade5Box_KeyPress);
             // 
@@ -197,7 +197,7 @@
             this.Grade4Box.Location = new System.Drawing.Point(479, 385);
             this.Grade4Box.Margin = new System.Windows.Forms.Padding(4);
             this.Grade4Box.Name = "Grade4Box";
-            this.Grade4Box.Size = new System.Drawing.Size(121, 29);
+            this.Grade4Box.Size = new System.Drawing.Size(154, 29);
             this.Grade4Box.TabIndex = 30;
             this.Grade4Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Grade4Box_KeyPress);
             // 
@@ -206,7 +206,7 @@
             this.Grade3Box.Location = new System.Drawing.Point(479, 347);
             this.Grade3Box.Margin = new System.Windows.Forms.Padding(4);
             this.Grade3Box.Name = "Grade3Box";
-            this.Grade3Box.Size = new System.Drawing.Size(121, 29);
+            this.Grade3Box.Size = new System.Drawing.Size(154, 29);
             this.Grade3Box.TabIndex = 29;
             this.Grade3Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Grade3Box_KeyPress);
             // 
@@ -215,7 +215,7 @@
             this.Grade2Box.Location = new System.Drawing.Point(479, 308);
             this.Grade2Box.Margin = new System.Windows.Forms.Padding(4);
             this.Grade2Box.Name = "Grade2Box";
-            this.Grade2Box.Size = new System.Drawing.Size(121, 29);
+            this.Grade2Box.Size = new System.Drawing.Size(154, 29);
             this.Grade2Box.TabIndex = 28;
             this.Grade2Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Grade2Box_KeyPress);
             // 
@@ -224,7 +224,7 @@
             this.Grade1Box.Location = new System.Drawing.Point(479, 270);
             this.Grade1Box.Margin = new System.Windows.Forms.Padding(4);
             this.Grade1Box.Name = "Grade1Box";
-            this.Grade1Box.Size = new System.Drawing.Size(121, 29);
+            this.Grade1Box.Size = new System.Drawing.Size(154, 29);
             this.Grade1Box.TabIndex = 27;
             this.Grade1Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Grade1Box_KeyPress);
             // 
@@ -233,7 +233,7 @@
             this.PhoneBox.Location = new System.Drawing.Point(479, 232);
             this.PhoneBox.Margin = new System.Windows.Forms.Padding(4);
             this.PhoneBox.Name = "PhoneBox";
-            this.PhoneBox.Size = new System.Drawing.Size(121, 29);
+            this.PhoneBox.Size = new System.Drawing.Size(154, 29);
             this.PhoneBox.TabIndex = 26;
             this.PhoneBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PhoneBox_KeyPress);
             // 
@@ -242,7 +242,7 @@
             this.EmailBox.Location = new System.Drawing.Point(479, 193);
             this.EmailBox.Margin = new System.Windows.Forms.Padding(4);
             this.EmailBox.Name = "EmailBox";
-            this.EmailBox.Size = new System.Drawing.Size(121, 29);
+            this.EmailBox.Size = new System.Drawing.Size(154, 29);
             this.EmailBox.TabIndex = 25;
             // 
             // LastNameBox
@@ -250,7 +250,7 @@
             this.LastNameBox.Location = new System.Drawing.Point(479, 155);
             this.LastNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.LastNameBox.Name = "LastNameBox";
-            this.LastNameBox.Size = new System.Drawing.Size(121, 29);
+            this.LastNameBox.Size = new System.Drawing.Size(154, 29);
             this.LastNameBox.TabIndex = 24;
             // 
             // FirstNameBox
@@ -258,7 +258,7 @@
             this.FirstNameBox.Location = new System.Drawing.Point(479, 116);
             this.FirstNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.FirstNameBox.Name = "FirstNameBox";
-            this.FirstNameBox.Size = new System.Drawing.Size(121, 29);
+            this.FirstNameBox.Size = new System.Drawing.Size(154, 29);
             this.FirstNameBox.TabIndex = 23;
             // 
             // StudentViewButton
@@ -303,6 +303,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddStudentForm";
             this.Text = "AddStudentForm";
+            this.Load += new System.EventHandler(this.AddStudentForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

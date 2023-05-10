@@ -51,3 +51,5 @@ C:\Users\liora\OneDrive\מסמכים\GitHub\TDD\TDD\obj\Debug\TDD.csproj.CoreCom
 C:\Users\liora\OneDrive\מסמכים\GitHub\TDD\TDD\obj\Debug\TDD.csproj.CopyComplete
 C:\Users\liora\OneDrive\מסמכים\GitHub\TDD\TDD\obj\Debug\TDD.exe
 C:\Users\liora\OneDrive\מסמכים\GitHub\TDD\TDD\obj\Debug\TDD.pdb
+C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\TDD\bin\Debug\Faker.dll
+C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\TDD\obj\Debug\TDD.csproj.CopyComplete

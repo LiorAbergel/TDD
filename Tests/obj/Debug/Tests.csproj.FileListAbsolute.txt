@@ -16,3 +16,7 @@ C:\Users\maorm\Source\Repos\TDD\Tests\obj\Debug\Tests.pdb
 C:\Users\maorm\Source\Repos\TDD\Tests\bin\Debug\TDD.exe
 C:\Users\maorm\Source\Repos\TDD\Tests\bin\Debug\TDD.pdb
 C:\Users\maorm\Source\Repos\TDD\Tests\bin\Debug\TDD.exe.config
+C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\Tests\obj\Debug\Tests.csproj.AssemblyReference.cache
+C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\Tests\obj\Debug\Tests.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\Tests\obj\Debug\Tests.dll
+C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\Tests\obj\Debug\Tests.pdb

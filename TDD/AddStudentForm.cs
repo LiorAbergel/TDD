@@ -179,5 +179,10 @@ namespace TDD
                 e.Handled = true;
             }
         }
+
+        private void AddStudentForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
