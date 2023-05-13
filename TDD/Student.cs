@@ -30,12 +30,11 @@ namespace TDD
 
 
         public void setId(string id) { this.id = id; }
-        public void setFirstName(string name) { this.firstName = name; }
+        public void setFirstName(string firstName) { this.firstName = firstName; }
         public void setLastName(string lastName) { this.lastName = lastName; }
-        public void setEmail(string email) { this.firstName = email; }
+        public void setEmail(string email) { this.email = email; }
         public void setGrade(int[] grade) { this.grades = grade; }
         public void setPhone(string phone) { this.phone = phone; }
-
         public string getId() { return id; }
         public string getFirstName() { return firstName; }
         public string getLastName() { return lastName; }
@@ -56,11 +55,6 @@ namespace TDD
                 }
             }
             avg = sum / amountOfGrades;
-        }
-
-        internal void setId(int convertedIntToString)
-        {
-            throw new NotImplementedException();
         }
     }
 }

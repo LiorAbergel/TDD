@@ -41,8 +41,6 @@ namespace TDD.Tests
             myArray[2] = T3;
 
             CollectionAssert.AreEqual(myArray, StudentsTest);
-
-
         }
     }
 }
