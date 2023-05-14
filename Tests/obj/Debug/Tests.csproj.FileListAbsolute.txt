@@ -20,3 +20,7 @@ C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\Tests\obj\Debug\Tests.csproj.Assembl
 C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\Tests\obj\Debug\Tests.csproj.CoreCompileInputs.cache
 C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\Tests\obj\Debug\Tests.dll
 C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\Tests\obj\Debug\Tests.pdb
+C:\Users\liora\OneDrive\מסמכים\GitHub\TDD\Tests\obj\Debug\Tests.csproj.AssemblyReference.cache
+C:\Users\liora\OneDrive\מסמכים\GitHub\TDD\Tests\obj\Debug\Tests.csproj.CoreCompileInputs.cache
+C:\Users\liora\OneDrive\מסמכים\GitHub\TDD\Tests\obj\Debug\Tests.dll
+C:\Users\liora\OneDrive\מסמכים\GitHub\TDD\Tests\obj\Debug\Tests.pdb

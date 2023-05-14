@@ -13,7 +13,7 @@ namespace TDD
     {
         public static List<Student> Students;
 
-        public static DataTable studentsTable;
+        public static DataTable studentsTable; 
 
         public WelcomeForm()
         {
@@ -48,6 +48,7 @@ namespace TDD
             studentsTable.Columns.Add("Last Name", typeof(string));
             studentsTable.Columns.Add("Email", typeof(string));
             studentsTable.Columns.Add("Phone", typeof(string));
+            studentsTable.Columns.Add("Average", typeof(string));
             studentsTable.Columns.Add("Algorithms I", typeof(int));
             studentsTable.Columns.Add("Statistics", typeof(int));
             studentsTable.Columns.Add("Advanced OOP", typeof(int));
@@ -59,7 +60,7 @@ namespace TDD
                 Student student = Students[i];
                 grades = student.getGrades();
                 studentsTable.Rows.Add(i + 1, student.getId(), student.getFirstName(), student.getLastName(), student.getEmail(), student.getPhone(),
-                                    grades[0], grades[1], grades[2], grades[3], grades[4]);
+                                    student.getAvg(), grades[0], grades[1], grades[2], grades[3], grades[4]);
             }
         }
 
@@ -89,6 +90,11 @@ namespace TDD
         {
 
 
+        }
+
+        public static void setDataTable(DataTable dt)
+        {
+            studentsTable = dt;
         }
 
 

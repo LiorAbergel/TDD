@@ -38,9 +38,9 @@ namespace TDD
 
         private void StudentViewButton_Click(object sender, EventArgs e)
         {
-            // check before if theres already an open student view form
+            this.Close();
             StudentViewForm studentViewForm = new StudentViewForm();
-            studentViewForm.ShowDialog();
+            studentViewForm.Show();
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -54,16 +54,23 @@ namespace TDD
 
             Student newStud = new Student();
 
-            // TODO : add personalized message if length not valid , and if input contains letters or symobls
             string id = IDBox.Text;
-            if (Regex.IsMatch(id, @"^\d{9}$"))
+            if (id.Length == 9)
             {
-                newStud.setId(id);
+                if (Regex.IsMatch(id, @"^\d{9}$"))
+                {
+                    newStud.setId(id);
+                }
+                else
+                {
+                    // handle invalid input because of an unexpected value
+                    MessageBox.Show("Invalid input of id: " + IDBox.Text + ". Can only contain digits !");
+                    return;
+                }
             }
             else
             {
-                // handle invalid input because of an unexpected value
-                MessageBox.Show("Invalid input of id: " + IDBox.Text);
+                MessageBox.Show("Invalid input of id: " + IDBox.Text + ". Must be 9 digits long !");
                 return;
             }
 
@@ -104,8 +111,7 @@ namespace TDD
             }
 
 
-            // TODO : fix personalized message in phone checking
-            string phone = PhoneBox.Text; // example phone number
+            string phone = PhoneBox.Text;
             Regex regex = new Regex(@"^05[0-9]{8}$"); // regular expression for the desired format
             if (regex.IsMatch(phone))
             {
@@ -141,7 +147,6 @@ namespace TDD
                 if (int.TryParse(stringGradeArray[i], out intGradeArray[i]))
                 {
                     // the parsing was successful and was converted into the array of int grades, continue
-                    
                 }
                 else
                 {
@@ -171,13 +176,23 @@ namespace TDD
 
         }
 
-
-        bool CheckPhoneNumValidaion(string phoneNum) { return true; }
-
         private void IDBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             //Makes they key box accept only numbers
             if((!char.IsNumber(e.KeyChar))&& (!char.IsControl(e.KeyChar)))
+                e.Handled = true;
+        }
+        private void FirstNameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Makes they key box accept only letters
+            if ((!char.IsLetter(e.KeyChar)) && (!char.IsControl(e.KeyChar)))
+                e.Handled = true;
+        }
+
+        private void LastNameBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Makes they key box accept only letters
+            if ((!char.IsLetter(e.KeyChar)) && (!char.IsControl(e.KeyChar)))
                 e.Handled = true;
         }
 
@@ -239,5 +254,7 @@ namespace TDD
         {
 
         }
+
+
     }
 }
