@@ -16,7 +16,7 @@ namespace TDD
         public StudentViewForm()
         {
             InitializeComponent();
-
+            
             StudentGridView.DataSource = WelcomeForm.studentsTable;
         }
 
@@ -27,9 +27,10 @@ namespace TDD
 
         private void AddStudentButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
             AddStudentForm addStudentForm = new AddStudentForm();
-            addStudentForm.Show();
+            addStudentForm.ShowDialog();
+
         }
 
         /* v1
@@ -52,7 +53,7 @@ namespace TDD
         }
         */
 
-        public double BubbleSort() 
+        public List<Student> BubbleSort() 
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
 
@@ -69,13 +70,12 @@ namespace TDD
                     }
                 }          
             }
-
             stopwatch.Stop();
-
-            return stopwatch.Elapsed.TotalMilliseconds;
+            //stopwatch.Elapsed.TotalMilliseconds;
+            return WelcomeForm.Students;
         }
 
-        public static double QuickSort(List<Student> students, int left, int right)
+        public  List<Student> QuickSort(List<Student> students, int left, int right)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
 
@@ -87,8 +87,9 @@ namespace TDD
             }
 
             stopwatch.Stop();
+            QuickSortLabel.Text = stopwatch.Elapsed.TotalMilliseconds.ToString();
 
-            return stopwatch.Elapsed.TotalMilliseconds;
+            return students;
         }
 
         public static int Partition(List<Student> students, int left, int right)
@@ -155,6 +156,11 @@ namespace TDD
 
             WelcomeForm.setDataTable(studentsTable);
             StudentGridView.DataSource = WelcomeForm.studentsTable;
+        }
+
+        private void StudentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

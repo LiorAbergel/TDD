@@ -27,7 +27,6 @@ C:\Users\maorm\Source\Repos\TDD\TDD\obj\Debug\TDD.pdb
 C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\TDD\bin\Debug\TDD.exe.config
 C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\TDD\bin\Debug\TDD.exe
 C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\TDD\bin\Debug\TDD.pdb
-C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\TDD\obj\Debug\TDD.csproj.AssemblyReference.cache
 C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\TDD\obj\Debug\TDD.AddStudentForm.resources
 C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\TDD\obj\Debug\TDD.StudentViewForm.resources
 C:\Users\Daniel\Desktop\GitProjects\DRW\TDD\TDD\obj\Debug\TDD.Properties.Resources.resources

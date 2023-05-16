@@ -40,7 +40,7 @@ namespace TDD
         {
             this.Close();
             StudentViewForm studentViewForm = new StudentViewForm();
-            studentViewForm.Show();
+            studentViewForm.ShowDialog();
         }
 
         private void AddButton_Click(object sender, EventArgs e)

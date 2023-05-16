@@ -35,9 +35,10 @@
             // 
             // AddStudentButton
             // 
-            this.AddStudentButton.Location = new System.Drawing.Point(127, 303);
+            this.AddStudentButton.Location = new System.Drawing.Point(13, 324);
+            this.AddStudentButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddStudentButton.Name = "AddStudentButton";
-            this.AddStudentButton.Size = new System.Drawing.Size(199, 60);
+            this.AddStudentButton.Size = new System.Drawing.Size(243, 72);
             this.AddStudentButton.TabIndex = 0;
             this.AddStudentButton.Text = "Add Student";
             this.AddStudentButton.UseVisualStyleBackColor = true;
@@ -45,9 +46,10 @@
             // 
             // StudentViewButton
             // 
-            this.StudentViewButton.Location = new System.Drawing.Point(455, 303);
+            this.StudentViewButton.Location = new System.Drawing.Point(435, 324);
+            this.StudentViewButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StudentViewButton.Name = "StudentViewButton";
-            this.StudentViewButton.Size = new System.Drawing.Size(199, 60);
+            this.StudentViewButton.Size = new System.Drawing.Size(243, 72);
             this.StudentViewButton.TabIndex = 1;
             this.StudentViewButton.Text = "Student View";
             this.StudentViewButton.UseVisualStyleBackColor = true;
@@ -56,21 +58,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(373, 237);
+            this.label1.Location = new System.Drawing.Point(318, 160);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 20);
+            this.label1.Size = new System.Drawing.Size(47, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Sce";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // WelcomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(691, 409);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.StudentViewButton);
             this.Controls.Add(this.AddStudentButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "WelcomeForm";
             this.Text = "WelcomeForm";
             this.Load += new System.EventHandler(this.WelcomeForm_Load);

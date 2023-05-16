@@ -31,7 +31,6 @@ namespace TDD
         private void InitializeComponent()
         {
             this.StudentGridView = new System.Windows.Forms.DataGridView();
-            this.AddStudentButton = new System.Windows.Forms.Button();
             this.BubbleSortButton = new System.Windows.Forms.Button();
             this.BubbleSortLabel = new System.Windows.Forms.Label();
             this.QuickSortLabel = new System.Windows.Forms.Label();
@@ -42,29 +41,22 @@ namespace TDD
             // StudentGridView
             // 
             this.StudentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentGridView.Location = new System.Drawing.Point(12, 12);
+            this.StudentGridView.Location = new System.Drawing.Point(15, 14);
+            this.StudentGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StudentGridView.Name = "StudentGridView";
             this.StudentGridView.RowHeadersVisible = false;
             this.StudentGridView.RowHeadersWidth = 62;
             this.StudentGridView.RowTemplate.Height = 28;
-            this.StudentGridView.Size = new System.Drawing.Size(1339, 566);
+            this.StudentGridView.Size = new System.Drawing.Size(1637, 679);
             this.StudentGridView.TabIndex = 0;
-            // 
-            // AddStudentButton
-            // 
-            this.AddStudentButton.Location = new System.Drawing.Point(1260, 601);
-            this.AddStudentButton.Name = "AddStudentButton";
-            this.AddStudentButton.Size = new System.Drawing.Size(91, 54);
-            this.AddStudentButton.TabIndex = 1;
-            this.AddStudentButton.Text = "Add Student";
-            this.AddStudentButton.UseVisualStyleBackColor = true;
-            this.AddStudentButton.Click += new System.EventHandler(this.AddStudentButton_Click);
+            this.StudentGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentGridView_CellContentClick);
             // 
             // BubbleSortButton
             // 
-            this.BubbleSortButton.Location = new System.Drawing.Point(12, 584);
+            this.BubbleSortButton.Location = new System.Drawing.Point(15, 701);
+            this.BubbleSortButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BubbleSortButton.Name = "BubbleSortButton";
-            this.BubbleSortButton.Size = new System.Drawing.Size(91, 71);
+            this.BubbleSortButton.Size = new System.Drawing.Size(111, 85);
             this.BubbleSortButton.TabIndex = 2;
             this.BubbleSortButton.Text = "Bubble Sort O(n^2)";
             this.BubbleSortButton.UseVisualStyleBackColor = true;
@@ -73,26 +65,29 @@ namespace TDD
             // BubbleSortLabel
             // 
             this.BubbleSortLabel.AutoSize = true;
-            this.BubbleSortLabel.Location = new System.Drawing.Point(122, 618);
+            this.BubbleSortLabel.Location = new System.Drawing.Point(149, 742);
+            this.BubbleSortLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BubbleSortLabel.Name = "BubbleSortLabel";
-            this.BubbleSortLabel.Size = new System.Drawing.Size(0, 20);
+            this.BubbleSortLabel.Size = new System.Drawing.Size(0, 25);
             this.BubbleSortLabel.TabIndex = 3;
             this.BubbleSortLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // QuickSortLabel
             // 
             this.QuickSortLabel.AutoSize = true;
-            this.QuickSortLabel.Location = new System.Drawing.Point(365, 618);
+            this.QuickSortLabel.Location = new System.Drawing.Point(446, 742);
+            this.QuickSortLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.QuickSortLabel.Name = "QuickSortLabel";
-            this.QuickSortLabel.Size = new System.Drawing.Size(0, 20);
+            this.QuickSortLabel.Size = new System.Drawing.Size(0, 25);
             this.QuickSortLabel.TabIndex = 5;
             this.QuickSortLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // QuickSortButton
             // 
-            this.QuickSortButton.Location = new System.Drawing.Point(255, 584);
+            this.QuickSortButton.Location = new System.Drawing.Point(335, 701);
+            this.QuickSortButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.QuickSortButton.Name = "QuickSortButton";
-            this.QuickSortButton.Size = new System.Drawing.Size(91, 71);
+            this.QuickSortButton.Size = new System.Drawing.Size(111, 85);
             this.QuickSortButton.TabIndex = 4;
             this.QuickSortButton.Text = "QuickSort O(n log n)";
             this.QuickSortButton.UseVisualStyleBackColor = true;
@@ -100,15 +95,15 @@ namespace TDD
             // 
             // StudentViewForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1817, 944);
+            this.ClientSize = new System.Drawing.Size(1674, 809);
             this.Controls.Add(this.QuickSortLabel);
             this.Controls.Add(this.QuickSortButton);
             this.Controls.Add(this.BubbleSortLabel);
             this.Controls.Add(this.BubbleSortButton);
-            this.Controls.Add(this.AddStudentButton);
             this.Controls.Add(this.StudentGridView);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "StudentViewForm";
             this.Text = "Student View";
             this.Load += new System.EventHandler(this.StudentViewForm_Load);
@@ -121,7 +116,6 @@ namespace TDD
         #endregion
 
         private System.Windows.Forms.DataGridView StudentGridView;
-        private System.Windows.Forms.Button AddStudentButton;
         private System.Windows.Forms.Button BubbleSortButton;
         private System.Windows.Forms.Label BubbleSortLabel;
         private System.Windows.Forms.Label QuickSortLabel;

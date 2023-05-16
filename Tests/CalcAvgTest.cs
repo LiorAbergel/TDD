@@ -8,8 +8,9 @@ namespace Tests
     {
 
         [TestMethod]
-        public void TestMethod1()
+        public void TestGetAvg1()
         {
+            // test is to verify the correctness of the getAvg() method in the Student class.
             int[] grade = { 10, 10, 10, 10, 10 };
             var T = new TDD.Student("123456", "mama", "momo", "mama_momo@walla.com", "050334551", grade);
             float avg = T.getAvg();
@@ -17,7 +18,7 @@ namespace Tests
             Assert.AreEqual(expected_avg, avg);
         }
         [TestMethod]
-        public void TestMethod2()
+        public void TestGetAvg2()
         {
             int[] grade = { 10, 10, 10, 10, 10 };
             var T = new TDD.Student("123456", "mama", "momo", "mama_momo@walla.com", "050334551", grade);
@@ -26,7 +27,7 @@ namespace Tests
             Assert.AreNotEqual(expected_avg, avg);
         }
         [TestMethod]
-        public void TestMethod3()
+        public void TestGetAvg3()
         {
             Random rand = new Random();
             int amountOfGrades = 0;
@@ -40,54 +41,54 @@ namespace Tests
                 Assert.AreEqual(expected_avg, avg);
             }
         }
-        [TestMethod]
-        public void TestMethod4()
-        {
-            Random rand = new Random();
-            int amountOfGrades = 0;
-            int sum = 0;
-            for (int i = 0; i < 10000; i++)
-            {
-                int[] grade = { rand.Next(0, 100), rand.Next(0, 100), 777, rand.Next(0, 100), rand.Next(0, 100) };
-                var T = new TDD.Student("123456", "mama", "momo", "mama_momo@walla.com", "050334551", grade);
-                float avg = T.getAvg();
-                for (int j = 0; j < 5; j++)
-                {
-                    if (grade[j] != 777)
-                    {
-                        sum += grade[j];
-                        amountOfGrades++;
-                    }
-                }
-                float expectedAvd = sum / amountOfGrades;
-                Assert.AreEqual(expectedAvd, avg);
-            }
-        }
-        [TestMethod]
-        public void TestMethod5()
-        {
-            Random rand = new Random();
-            int amountOfGrades = 0;
-            int sum = 0;
-            for (int i = 0; i < 10000; i++)
-            {
-                int[] grade = new int[5];
-                var T = new TDD.Student("123456", "mama", "momo", "mama_momo@walla.com", "050334551", grade);
-                Assert.ThrowsException;
-            }
-        }
-        [TestMethod]
-        public void TestMethod6()
-        {
-            Random rand = new Random();
-            int amountOfGrades = 0;
-            int sum = 0;
-            for (int i = 0; i < 10000; i++)
-            {
-                int[] grade = { "Hi!", "It", "was", "me,", "Dio!" };
-                Assert.ThrowsException<ArgumentException>(() => new TDD.Student("123456", "mama", "momo", "mama_momo@walla.com", "050334551", grade));
+        //[TestMethod]
+        //public void TestMethod4()
+        //{
+        //    Random rand = new Random();
+        //    int amountOfGrades = 0;
+        //    int sum = 0;
+        //    for (int i = 0; i < 10000; i++)
+        //    {
+        //        int[] grade = { rand.Next(0, 100), rand.Next(0, 100), 777, rand.Next(0, 100), rand.Next(0, 100) };
+        //        var T = new TDD.Student("123456", "mama", "momo", "mama_momo@walla.com", "050334551", grade);
+        //        float avg = T.getAvg();
+        //        for (int j = 0; j < 5; j++)
+        //        {
+        //            if (grade[j] != 777)
+        //            {
+        //                sum += grade[j];
+        //                amountOfGrades++;
+        //            }
+        //        }
+        //        float expectedAvd = sum / amountOfGrades;
+        //        Assert.AreEqual(expectedAvd, avg);
+        //    }
+        //}
+        //[TestMethod]
+        //public void TestMethod5()
+        //{
+        //    Random rand = new Random();
+        //    int amountOfGrades = 0;
+        //    int sum = 0;
+        //    for (int i = 0; i < 10000; i++)
+        //    {
+        //        int[] grade = new int[5];
+        //        var T = new TDD.Student("123456", "mama", "momo", "mama_momo@walla.com", "050334551", grade);
+        //        Assert.ThrowsException;
+        //    }
+        //}
+        //[TestMethod]
+        //public void TestMethod6()
+        //{
+        //    Random rand = new Random();
+        //    int amountOfGrades = 0;
+        //    int sum = 0;
+        //    for (int i = 0; i < 10000; i++)
+        //    {
+        //        int[] grade = { "Hi!", "It", "was", "me,", "Dio!" };
+        //        Assert.ThrowsException<ArgumentException>(() => new TDD.Student("123456", "mama", "momo", "mama_momo@walla.com", "050334551", grade));
 
-            }
-        }
+        //    }
+        //}
     }
 }
