@@ -71,7 +71,7 @@ namespace TDD
                 }          
             }
             stopwatch.Stop();
-            //stopwatch.Elapsed.TotalMilliseconds;
+            BubbleSortLabel.Text = stopwatch.Elapsed.TotalMilliseconds.ToString();
             return WelcomeForm.Students;
         }
 
@@ -117,13 +117,13 @@ namespace TDD
 
         private void BubbleSortButton_Click(object sender, EventArgs e)
         {
-            BubbleSortLabel.Text = BubbleSort().ToString();
+            List<Student> students= BubbleSort();
             setStudentsGridView();
         }
 
         private void QuickSortButton_Click(object sender, EventArgs e)
         {
-            QuickSortLabel.Text = QuickSort(WelcomeForm.Students, 0, WelcomeForm.Students.Count - 1).ToString();
+            List<Student>  students = QuickSort(WelcomeForm.Students, 0, WelcomeForm.Students.Count - 1);
             setStudentsGridView();
         }
 
