@@ -13,11 +13,12 @@ namespace TDD
 {
     public partial class StudentViewForm : Form
     {
-        public StudentViewForm()
+        public WelcomeForm welcomeForm;
+        public StudentViewForm(WelcomeForm welcomeForm)
         {
             InitializeComponent();
             
-            StudentGridView.DataSource = WelcomeForm.studentsTable;
+            this.welcomeForm = welcomeForm;
         }
 
         private void StudentViewForm_Load(object sender, EventArgs e)
@@ -25,15 +26,7 @@ namespace TDD
 
         }
 
-        private void AddStudentButton_Click(object sender, EventArgs e)
-        {
-            
-            AddStudentForm addStudentForm = new AddStudentForm();
-            addStudentForm.ShowDialog();
-
-        }
-
-        /* v1
+        /* v1 ---------------------------------------------------------------
         public List<Student> BubbleSort(List<Student> students)
         {
             for (int i = 0; i < Students.Count - 1; i++)
@@ -51,32 +44,36 @@ namespace TDD
             Console.WriteLine(DateTime.Now.Millisecond);
             return Students;
         }
-        */
+        --------------------------------------------------------------- */
 
-        public List<Student> BubbleSort() 
+        /* v2 ---------------------------------------------------------------
+        public static double BubbleSort() 
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
 
-            // a sorting algorithem that sorts the average grades of students
-            for (int i = 0; i < WelcomeForm.Students.Count - 1; i++)
+            for (int i = 0; i < welcomeForm.Students.Count - 1; i++)
             {
-                for (int j = 0; j < WelcomeForm.Students.Count - i - 1; j++)
+                for (int j = 0; j < welcomeForm.Students.Count - i - 1; j++)
                 {
-                    if (WelcomeForm.Students[j].getAvg() < WelcomeForm.Students[j + 1].getAvg())
+                    if (welcomeForm.Students[j].getAvg() < welcomeForm.Students[j + 1].getAvg())
                     {
-                        Student temp = WelcomeForm.Students[j];
-                        WelcomeForm.Students[j] = WelcomeForm.Students[j + 1];
-                        WelcomeForm.Students[j + 1] = temp;
+                        Student temp = welcomeForm.Students[j];
+                        welcomeForm.Students[j] = welcomeForm.Students[j + 1];
+                        welcomeForm.Students[j + 1] = temp;
                     }
                 }          
             }
-            stopwatch.Stop();
-            BubbleSortLabel.Text = stopwatch.Elapsed.TotalMilliseconds.ToString();
-            return WelcomeForm.Students;
-        }
 
-        public  List<Student> QuickSort(List<Student> students, int left, int right)
+            stopwatch.Stop();
+
+            return stopwatch.Elapsed.TotalMilliseconds;
+        }
+        --------------------------------------------------------------- */
+
+        // updated (and fastest) sorting method
+        public static double QuickSort(List<Student> students, int left, int right)
         {
+
             Stopwatch stopwatch = Stopwatch.StartNew();
 
             if (left < right)
@@ -87,9 +84,8 @@ namespace TDD
             }
 
             stopwatch.Stop();
-            QuickSortLabel.Text = stopwatch.Elapsed.TotalMilliseconds.ToString();
 
-            return students;
+            return stopwatch.Elapsed.TotalMilliseconds;
         }
 
         public static int Partition(List<Student> students, int left, int right)
@@ -112,18 +108,9 @@ namespace TDD
             return i + 1;
         }
 
-
-        public DataGridView getStudentGridView() { return  StudentGridView; }
-
-        private void BubbleSortButton_Click(object sender, EventArgs e)
-        {
-            List<Student> students= BubbleSort();
-            setStudentsGridView();
-        }
-
         private void QuickSortButton_Click(object sender, EventArgs e)
         {
-            List<Student>  students = QuickSort(WelcomeForm.Students, 0, WelcomeForm.Students.Count - 1);
+            QuickSortLabel.Text = QuickSort(welcomeForm.Students, 0, welcomeForm.Students.Count - 1).ToString();
             setStudentsGridView();
         }
 
@@ -144,19 +131,20 @@ namespace TDD
             studentsTable.Columns.Add("Data Structures", typeof(int));
             studentsTable.Columns.Add("Software Testing & Quality", typeof(int));
 
-
             int[] grades;
-            for (int i = 0; i < WelcomeForm.Students.Count; i++)
+            for (int i = 0; i < welcomeForm.Students.Count; i++)
             {
-                Student student = WelcomeForm.Students[i];
+                Student student = welcomeForm.Students[i];
                 grades = student.getGrades();
                 studentsTable.Rows.Add(i + 1, student.getId(), student.getFirstName(), student.getLastName(), student.getEmail(), student.getPhone(),
                                     student.getAvg(), grades[0], grades[1], grades[2], grades[3], grades[4]);
             }
 
-            WelcomeForm.setDataTable(studentsTable);
-            StudentGridView.DataSource = WelcomeForm.studentsTable;
+            welcomeForm.studentsTable = studentsTable;
+            StudentGridView.DataSource = welcomeForm.studentsTable;
         }
+
+        public void setTableDataSource(DataTable studentsTable) { StudentGridView.DataSource=studentsTable; }
 
         private void StudentGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

@@ -1,5 +1,8 @@
 {
-  "ExpandedNodes": [],
-  "SelectedNode": "\\TDD.sln",
+  "ExpandedNodes": [
+    "",
+    "\\TDD"
+  ],
+  "SelectedNode": "\\TDD\\StudentViewForm.cs",
   "PreviewInSolutionExplorer": false
 }

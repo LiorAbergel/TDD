@@ -7,9 +7,12 @@ namespace TDD
 {
     public partial class AddStudentForm : Form
     {
+        public WelcomeForm welcomeForm;
+
         public static int studentsAdded = 10000;
-        public AddStudentForm()
+        public AddStudentForm(WelcomeForm welcomeForm)
         {
+            this.welcomeForm = welcomeForm;
             InitializeComponent();
         }
 
@@ -26,21 +29,21 @@ namespace TDD
             {
                 if (control is TextBox && string.IsNullOrEmpty(control.Text))
                 {
-                    emptyTextBoxFound = true;
-                    break;
+                    if (!control.Name.StartsWith("Grade"))
+                    {
+                        emptyTextBoxFound = true;
+                        break;
+                    }
+                    else
+                    {
+                        control.Text = "777";
+                    }
                 }
             }
             if (emptyTextBoxFound)
                 MessageBox.Show("One or more text boxes are empty. Please fill them in.");
               
             return emptyTextBoxFound;
-        }
-
-        private void StudentViewButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            StudentViewForm studentViewForm = new StudentViewForm();
-            studentViewForm.ShowDialog();
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -154,7 +157,7 @@ namespace TDD
                     MessageBox.Show("Invalid input: " + stringGradeArray[i]);
                     return;
                 }
-                if (intGradeArray[i] != 777 && intGradeArray[i]> 100)
+                if (intGradeArray[i] != 777 && intGradeArray[i] > 100)
                 {
                     MessageBox.Show("Invalid input: " + stringGradeArray[i] +" is above 100");
                     return;
@@ -168,10 +171,10 @@ namespace TDD
             }         
             newStud.setGrade(intGradeArray);     
             
-            WelcomeForm.Students.Add(newStud);
+            welcomeForm.Students.Add(newStud);
 
             studentsAdded++;
-            WelcomeForm.studentsTable.Rows.Add(studentsAdded, newStud.getId(), newStud.getFirstName(), newStud.getLastName(), newStud.getEmail(), newStud.getPhone(),
+            welcomeForm.studentsTable.Rows.Add(studentsAdded, newStud.getId(), newStud.getFirstName(), newStud.getLastName(), newStud.getEmail(), newStud.getPhone(),
                 intGradeArray[0], intGradeArray[1], intGradeArray[2], intGradeArray[3], intGradeArray[4]);
 
         }

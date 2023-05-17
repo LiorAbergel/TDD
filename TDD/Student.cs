@@ -46,15 +46,18 @@ namespace TDD
         {
             int sum = 0;
             int amountOfGrades = 0;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < grades.Length; i++)
             {
-                if (grades[i] != 777)
+                if (grades[i] != 777 && grades[i] >= 0 && grades[i] <= 100)
                 {
                     sum += grades[i];
                     amountOfGrades++;
                 }
             }
-            avg = sum / amountOfGrades;
+
+            if (amountOfGrades > 0)
+                avg = sum / amountOfGrades;
+            else avg = 0;
         }
     }
 }
