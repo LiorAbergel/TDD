@@ -134,7 +134,7 @@ namespace TDD
             else
             {
                 // handle error: phone number is not in the desired format
-                MessageBox.Show("Invalid input of Phone: " + phone);
+                MessageBox.Show("Invalid input of Phone: " + phone + ", phone should be in format 05********");
                 return;
             }
 
